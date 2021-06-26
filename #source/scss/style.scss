@@ -1,5 +1,5 @@
 @import "_nullstyle";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
 body {
     font-family: Poppins;
 }
@@ -284,7 +284,7 @@ body {
     &__title {
         font-size: 70px;
         line-height: 80px;
-        font-weight: 400;
+        font-weight: 700;
         letter-spacing: 0.03em;
         color: #ffffff;
         margin-bottom: 84px;
@@ -422,4 +422,196 @@ body {
             color: #ffcc00;
         }
     }
+}
+
+.services {
+    &__body {
+        padding-top: 134px;
+        padding-bottom: 105px;
+    }
+
+    &__title {
+        font-size: 50px;
+        line-height: 80px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        color: #ba0000;
+        margin-bottom: 115px;
+    }
+
+    &__pages {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__page {
+        flex: 1 0 270px;
+        margin-bottom: 20px;
+    }
+
+    &__explore {
+        margin-bottom: 20px;
+        flex: 1 0 270px;
+    }
+}
+.serv-page {
+    margin-right: 30px;
+    max-width: 270px;
+    &__image {
+        height: 180px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: #ba0000;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #777777;
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        color: #222222;
+        i {
+            color: #ba0000;
+            transform: translateY(2px);
+        }
+    }
+}
+.explore {
+    padding: 30px;
+    max-width: 270px;
+    height: 339px;
+    background-color: #ba0000;
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+        position: relative;
+        margin-bottom: 62px;
+        &::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: #ffcc00;
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+        margin-bottom: 39px;
+    }
+
+    &__location {
+        max-width: 210px;
+        height: 50px;
+        background-color: #9d0000;
+        position: relative;
+        padding: 17px 18px;
+        margin-bottom: 20px;
+
+        .explore__poppup {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            max-height: 0px;
+            overflow: hidden;
+            transition: all ease 0.3s;
+
+            position: absolute;
+            //bottom: 0;
+            top: 100%;
+            right: 0;
+            background-color: #9d0000;
+        }
+        &.active {
+            .explore__poppup {
+                padding: 10px;
+                max-height: none;
+                height: 150px;
+                overflow: auto;
+                li {
+                    list-style: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    letter-spacing: 0.03em;
+                    color: #ffffff;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        color: #ffcc00;
+                    }
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            &:hover {
+                .explore__location-text {
+                    color: #ffcc00;
+                }
+            }
+        }
+    }
+
+    &__location-text {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #ffffff;
+    }
+
+    &__location-button {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        background-color: #ffcc00;
+        padding: 18px;
+        i {
+            font-size: 16px;
+            color: #ba0000;
+        }
+    }
+
+    &__button {
+    }
+}
+.fa-caret-down {
+}
+.yellow-button {
 }

@@ -5,5 +5,17 @@ jQuery('document').ready(function () {
 	$('.poppup-button').click(function (e) {
 		$(this).toggleClass('active');
 	})
+	$('.explore__location-button').click(function (e) {
+		$('.explore__location').toggleClass('active');
+	})
+	$('.explore__poppup li').click(function (e) {
+		//console.log('test');
+		text = this.textContent;
+		$('.explore__location-text').html(text);
+		$('.explore__location').toggleClass('active');
+
+		//console.log(text);
+
+	})
 })
 
